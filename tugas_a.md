@@ -1,8 +1,8 @@
 # TUGAS 2 ASISTENSI PBO - Jumat, 27 September 2019
 *soal ini berbobot lebih daripada soal sebelah*
-NAMA: `isi nama disini`
+NAMA: Pande Putu Velya Cahaya Fortuna
 
-NRP: `isi nrp disini`
+NRP: 06111840000024
 
 
 ## DESKRIPSI SOAL
