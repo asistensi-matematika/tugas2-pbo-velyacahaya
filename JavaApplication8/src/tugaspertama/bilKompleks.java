@@ -14,7 +14,29 @@ import java.util.Scanner;
 public class bilKompleks {
     static int riil, imajiner;
     
+    public static void mencariNum(String Z, int riil1, int riil2, int img1, int img2){
+        if (riil1==0 && riil2==0){
+            riil = mengubahNum("0");
+        }
+        else {
+            String real  = Z.substring(riil1,riil2);
+            riil = mengubahNum(real);
+        }
+        String imaginer = Z.substring(img1,img2);
+        imajiner = mengubahNum(imaginer);
+    }
+    public static int mengubahNum(String huruf){
+        int num = Integer.parseInt(huruf);
+        return num;
+    }
+    
+    public static void print(int i1, int i2, int r1, int r2){
+        int hasilRiil = (r1*r2) - (i1*i2);
+        int hasilImajiner = (r1*i2) + (i1*r2);
+        System.out.println(hasilRiil + " + " + hasilImajiner + "i" );
+    }
     public static void main(String[] args) {
+        System.out.println("Input : ");
         Scanner input = new Scanner(System.in);
         String X = input.nextLine();
         String Y = input.nextLine();
@@ -43,26 +65,5 @@ public class bilKompleks {
             int i2=imajiner;
             print(i1,i2,r1,r2);
         }
-    }
-    public static void mencariNum(String Z, int riil1, int riil2, int img1, int img2){
-        if (riil1==0 && riil2==0){
-            riil = mengubahNum("0");
-        }
-        else {
-            String real  = Z.substring(riil1,riil2);
-            imajiner = mengubahNum(real);
-        }
-        String imaginer = Z.substring(img1,img2);
-        imajiner = mengubahNum(imaginer);
-    }
-    public static int mengubahNum(String huruf){
-        int num = Integer.parseInt(huruf);
-        return num;
-    }
-    
-    public static void print(int i1, int i2, int r1, int r2){
-        int hasilRiil = (r1*r2) - (i1*i2);
-        int hasilImajiner = (r1*i2) + (i1*r2);
-        System.out.println(hasilRiil + " + " + hasilImajiner + "i" );
     }
 }
